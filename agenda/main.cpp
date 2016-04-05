@@ -14,7 +14,7 @@ using namespace std;
 char nombres[3][100];
 char numeros[3][100];
 
-void añadirContactos()
+void agregarContactos()
 {
     for(int i=0;i<3;i++)
     {
@@ -63,7 +63,7 @@ int main(int argc, const char * argv[]) {
     bool running = true;
     int menu;
     
-    añadirContactos();
+    agregarContactos();
     
     while(running)
     {
