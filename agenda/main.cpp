@@ -11,17 +11,21 @@
 
 using namespace std;
 
-char nombres[3][100];
-char numeros[3][100];
+struct Contacto{
+    char nombre[100];
+    char numero[100];
+};
+
+struct Contacto contactos[3];
 
 void agregarContactos()
 {
     for(int i=0;i<3;i++)
     {
         cout << "Nombre nº" << i+1 << endl;
-        cin >> nombres[i];
+        cin >> contactos[i].nombre;
         cout << "Telefono nº" << i+1<< endl;
-        cin >> numeros[i];
+        cin >> contactos[i].numero;
     }
 }
 
@@ -32,13 +36,13 @@ bool porNombre()
     cin >> n;
     for(int i=0;i<3;i++)
     {
-        if(!strcmp(n,nombres[i])){
-            cout << "El numero correspondiente es: " << numeros[i] << endl;
-            return 1;
+        if(!strcmp(n,contactos[i].nombre)){
+            cout << "El numero correspondiente es: " << contactos[i].numero << endl;
+            return true;
         }
     }
     cout << "no hay resultados" << endl;
-    return 2;
+    return false;
 }
 
 bool porNumero()
@@ -48,13 +52,13 @@ bool porNumero()
     cin >> n;
     for(int i=0;i<3;i++)
     {
-        if(!strcmp(n,numeros[i])){
-            cout << "El nombre correspondiente es: " << nombres[i] << endl;
-            return 1;
+        if(!strcmp(n,contactos[i].numero)){
+            cout << "El nombre correspondiente es: " << contactos[i].nombre << endl;
+            return true;
         }
     }
     cout << "no hay resultados" << endl;
-    return 2;
+    return false;
     
 }
 
