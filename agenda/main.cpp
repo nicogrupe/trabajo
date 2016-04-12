@@ -12,12 +12,12 @@ void Ordenar(char*s[])
     char *aux;
     for(int i = 0;i<4;i++)
     {
-        for(int i = 0;i<4;i++)
+        for(int j = 0;j<4;j++)
         {
-            if( strcmp(s[i],s[i+1]) > 0){
-                aux = s[i+1];
-                s[i+1] = s[i];
-                s[i] = aux;
+            if( strcmp(s[j],s[j+1]) > 0){
+                aux = s[j+1];
+                s[j+1] = s[j];
+                s[j] = aux;
             }
         
         }
