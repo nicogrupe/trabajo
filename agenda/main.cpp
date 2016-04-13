@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 
 using namespace std;
 
@@ -30,7 +31,7 @@ int main()
     palabras lista;
     
     for(int i=0;i < 5;i++){
-        cout << "ingrese nombre nº" << i+1 << endl;
+        cout << "ingrese nombre n#" << i+1 << endl;
         lista.nombres[i] = new char[0];
         cin >> lista.nombres[i];
     }
@@ -46,6 +47,7 @@ int main()
         cout << endl;
     }
     
+system("pause");
     
     return 0;
 }
